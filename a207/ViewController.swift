@@ -55,12 +55,12 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
     
     //MARK:CollectView Data Source & Delegate
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return imageArray.count
+        return imageArray.count * 10
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell  = collectionView.dequeueReusableCell(withReuseIdentifier: "myCell", for: indexPath) as! MyCollectionViewCell
-        cell.theImgeView.image = imageArray[indexPath.row]
+        cell.theImgeView.image = imageArray[indexPath.row % 5]
         return cell
     }
     
@@ -77,6 +77,8 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         let okBtn = UIAlertAction(title: "顯示", style: .default) { (alert) in
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let nextVC = storyboard.instantiateViewController(withIdentifier: "imageVC") as! ImageViewController
+            nextVC.theSourceImage = self.imageArray[indexPath.row % 5]
+            nextVC.modalPresentationStyle = .fullScreen
             self.present(nextVC, animated: true, completion: nil)
         }
         alert.addAction(okBtn)

@@ -95,14 +95,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gXY-XT-XEU">
-                                <rect key="frame" x="87" y="384" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gXY-XT-XEU">
+                                <rect key="frame" x="0.0" y="241" width="414" height="414"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="gXY-XT-XEU" secondAttribute="height" multiplier="1:1" id="Xsr-Ns-TJn"/>
+                                </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2SY-M7-IbM">
+                                <rect key="frame" x="20" y="49" width="60" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="GlD-J9-KLG"/>
+                                    <constraint firstAttribute="width" constant="60" id="tmq-Hx-gkO"/>
+                                </constraints>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="back:" destination="sK9-T5-LqW" eventType="touchUpInside" id="T4v-ew-ihq"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="gXY-XT-XEU" firstAttribute="width" secondItem="smW-1S-Tx8" secondAttribute="width" multiplier="1:1" id="38h-Wq-HAb"/>
+                            <constraint firstItem="gXY-XT-XEU" firstAttribute="centerY" secondItem="zwM-SX-6YM" secondAttribute="centerY" id="Q0Y-fJ-VMf"/>
+                            <constraint firstItem="gXY-XT-XEU" firstAttribute="centerX" secondItem="zwM-SX-6YM" secondAttribute="centerX" id="Qvb-8h-Mh7"/>
+                            <constraint firstItem="2SY-M7-IbM" firstAttribute="leading" secondItem="smW-1S-Tx8" secondAttribute="leading" constant="20" id="cxi-Kj-VFC"/>
+                            <constraint firstItem="2SY-M7-IbM" firstAttribute="top" secondItem="smW-1S-Tx8" secondAttribute="top" constant="5" id="kdr-x9-NsV"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="smW-1S-Tx8"/>
                     </view>
+                    <connections>
+                        <outlet property="theImage" destination="gXY-XT-XEU" id="ENS-YX-fae"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tvu-qf-CID" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
