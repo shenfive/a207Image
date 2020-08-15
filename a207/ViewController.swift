@@ -63,5 +63,19 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         cell.theImgeView.image = imageArray[indexPath.row]
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print(indexPath)
+        let alert = UIAlertController
+            .init(title: "你選了",
+                  message: "第 \(indexPath.row) 張圖 ",
+                preferredStyle: .alert)
+        let cancelBun = UIAlertAction.init(title: "取消", style: .cancel, handler: nil)
+        alert.addAction(cancelBun)
+        
+        present(alert, animated: true, completion: nil)
+        
+    }
+    
 }
 
