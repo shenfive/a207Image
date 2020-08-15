@@ -11,21 +11,20 @@ import UIKit
 class ViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource {
 
     
-    var imageArray = [UIImage]()
+    var imageArray = [UIImage?]()
     @IBOutlet weak var myCollectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         imageArray = [
-            UIImage(named: "pic1")!,
-            UIImage(named: "pic2")!,
-            UIImage(named: "pic3")!,
-            UIImage(named: "pic4")!,
-            UIImage(named: "pic5")!
+            UIImage(named: "pic1"),
+            UIImage(named: "pic2"),
+            UIImage(named: "pic3"),
+            UIImage(named: "pic4"),
+            UIImage(named: "pic5")
         ]
         myCollectionView.delegate = self
         myCollectionView.dataSource = self
-        print("lunch")
 
 
     }
@@ -34,12 +33,14 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
     
     //MARK:CollectView Data Source & Delegate
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 100
+        return imageArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell  = collectionView.dequeueReusableCell(withReuseIdentifier: "myCell", for: indexPath)
-        cell.backgroundColor = UIColor.red
+        let cell  = collectionView.dequeueReusableCell(withReuseIdentifier: "myCell", for: indexPath) as! MyCollectionViewCell
+        cell.theImgeView.image = imageArray[indexPath.row]
+
+
         return cell
     }
 }
