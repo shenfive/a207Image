@@ -71,7 +71,16 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
                   message: "第 \(indexPath.row) 張圖 ",
                 preferredStyle: .alert)
         let cancelBun = UIAlertAction.init(title: "取消", style: .cancel, handler: nil)
+        
         alert.addAction(cancelBun)
+        
+        let okBtn = UIAlertAction(title: "顯示", style: .default) { (alert) in
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let nextVC = storyboard.instantiateViewController(withIdentifier: "imageVC") as! ImageViewController
+            self.present(nextVC, animated: true, completion: nil)
+        }
+        alert.addAction(okBtn)
+        
         
         present(alert, animated: true, completion: nil)
         

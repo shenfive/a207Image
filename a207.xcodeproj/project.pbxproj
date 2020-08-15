@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BA3E446C24E7A25F001D4997 /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3E446B24E7A25F001D4997 /* MyCollectionViewCell.swift */; };
+		BA3E446E24E7B994001D4997 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3E446D24E7B994001D4997 /* ImageViewController.swift */; };
 		BA6D096324E77DE1002819C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6D096224E77DE1002819C9 /* AppDelegate.swift */; };
 		BA6D096524E77DE1002819C9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6D096424E77DE1002819C9 /* SceneDelegate.swift */; };
 		BA6D096724E77DE1002819C9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6D096624E77DE1002819C9 /* ViewController.swift */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		BA3E446B24E7A25F001D4997 /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
+		BA3E446D24E7B994001D4997 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		BA6D095F24E77DE1002819C9 /* a207.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = a207.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA6D096224E77DE1002819C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA6D096424E77DE1002819C9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				BA6D096D24E77DE2002819C9 /* LaunchScreen.storyboard */,
 				BA6D097024E77DE2002819C9 /* Info.plist */,
 				BA3E446B24E7A25F001D4997 /* MyCollectionViewCell.swift */,
+				BA3E446D24E7B994001D4997 /* ImageViewController.swift */,
 			);
 			path = a207;
 			sourceTree = "<group>";
@@ -143,6 +146,7 @@
 			files = (
 				BA6D096724E77DE1002819C9 /* ViewController.swift in Sources */,
 				BA6D096324E77DE1002819C9 /* AppDelegate.swift in Sources */,
+				BA3E446E24E7B994001D4997 /* ImageViewController.swift in Sources */,
 				BA3E446C24E7A25F001D4997 /* MyCollectionViewCell.swift in Sources */,
 				BA6D096524E77DE1002819C9 /* SceneDelegate.swift in Sources */,
 			);
