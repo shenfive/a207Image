@@ -26,19 +26,33 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         myCollectionView.delegate = self
         myCollectionView.dataSource = self
         
+        setLayoutTo(number: 2)
+        
+    }
+    
+    func setLayoutTo(number:Int){
         let screeSize = self.view.bounds.size //UIScreen.main.bounds.size
         print(screeSize)
         
         let layout = UICollectionViewFlowLayout()
         
         layout.sectionInset = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
-        let side:CGFloat = (screeSize.width/3) - 10
+        let side:CGFloat = (screeSize.width / CGFloat(number) ) - 10
         
         layout.itemSize = CGSize(width: side, height: side)
         
         myCollectionView.setCollectionViewLayout(layout, animated: true)
-        
     }
+    
+    
+    @IBAction func changLayOut(_ sender: UISegmentedControl) {
+        print(sender.selectedSegmentIndex)
+        setLayoutTo(number: sender.selectedSegmentIndex + 2)
+    }
+    
+    
+    
+    
     //MARK:CollectView Data Source & Delegate
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return imageArray.count
