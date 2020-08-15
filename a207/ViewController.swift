@@ -26,14 +26,15 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         myCollectionView.delegate = self
         myCollectionView.dataSource = self
         
-        let screeSize = UIScreen.main.bounds.size
+        let screeSize = self.view.bounds.size //UIScreen.main.bounds.size
         print(screeSize)
         
         let layout = UICollectionViewFlowLayout()
         
+        layout.sectionInset = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
+        let side:CGFloat = (screeSize.width/3) - 10
         
-        
-        layout.itemSize = CGSize(width: 100, height: 100)
+        layout.itemSize = CGSize(width: side, height: side)
         
         myCollectionView.setCollectionViewLayout(layout, animated: true)
         
