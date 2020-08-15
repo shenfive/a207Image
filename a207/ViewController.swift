@@ -25,12 +25,19 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         ]
         myCollectionView.delegate = self
         myCollectionView.dataSource = self
-
-
+        
+        let screeSize = UIScreen.main.bounds.size
+        print(screeSize)
+        
+        let layout = UICollectionViewFlowLayout()
+        
+        
+        
+        layout.itemSize = CGSize(width: 100, height: 100)
+        
+        myCollectionView.setCollectionViewLayout(layout, animated: true)
+        
     }
-
-
-    
     //MARK:CollectView Data Source & Delegate
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return imageArray.count
@@ -39,8 +46,6 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell  = collectionView.dequeueReusableCell(withReuseIdentifier: "myCell", for: indexPath) as! MyCollectionViewCell
         cell.theImgeView.image = imageArray[indexPath.row]
-
-
         return cell
     }
 }
