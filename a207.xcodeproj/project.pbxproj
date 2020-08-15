@@ -13,7 +13,6 @@
 		BA6D096A24E77DE1002819C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA6D096824E77DE1002819C9 /* Main.storyboard */; };
 		BA6D096C24E77DE2002819C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA6D096B24E77DE2002819C9 /* Assets.xcassets */; };
 		BA6D096F24E77DE2002819C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA6D096D24E77DE2002819C9 /* LaunchScreen.storyboard */; };
-		BA6D097724E77EBF002819C9 /* pic1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = BA6D097624E77EBF002819C9 /* pic1.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +24,6 @@
 		BA6D096B24E77DE2002819C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BA6D096E24E77DE2002819C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BA6D097024E77DE2002819C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BA6D097624E77EBF002819C9 /* pic1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pic1.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +58,6 @@
 			children = (
 				BA6D096224E77DE1002819C9 /* AppDelegate.swift */,
 				BA6D096424E77DE1002819C9 /* SceneDelegate.swift */,
-				BA6D097624E77EBF002819C9 /* pic1.jpeg */,
 				BA6D096624E77DE1002819C9 /* ViewController.swift */,
 				BA6D096824E77DE1002819C9 /* Main.storyboard */,
 				BA6D096B24E77DE2002819C9 /* Assets.xcassets */,
@@ -130,7 +127,6 @@
 			files = (
 				BA6D096F24E77DE2002819C9 /* LaunchScreen.storyboard in Resources */,
 				BA6D096C24E77DE2002819C9 /* Assets.xcassets in Resources */,
-				BA6D097724E77EBF002819C9 /* pic1.jpeg in Resources */,
 				BA6D096A24E77DE1002819C9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
