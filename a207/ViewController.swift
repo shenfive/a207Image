@@ -79,6 +79,12 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
             let nextVC = storyboard.instantiateViewController(withIdentifier: "imageVC") as! ImageViewController
             nextVC.theSourceImage = self.imageArray[indexPath.row % 5]
             nextVC.modalPresentationStyle = .fullScreen
+            nextVC.callBack = {
+                let alert2 = UIAlertController(title: "謝謝", message: nil, preferredStyle: .alert)
+                let okBtn = UIAlertAction(title: "OK", style: .default, handler: nil)
+                alert2.addAction(okBtn)
+                self.present(alert2, animated: true, completion: nil)
+            }
             self.present(nextVC, animated: true, completion: nil)
         }
         alert.addAction(okBtn)

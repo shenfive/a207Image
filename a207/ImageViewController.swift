@@ -11,6 +11,10 @@ import UIKit
 class ImageViewController: UIViewController {
 
     @IBOutlet weak var theImage: UIImageView!
+    
+    var callBack:(()->())? = nil
+    
+    
     var theSourceImage:UIImage? = nil
     
     override func viewDidLoad() {
@@ -18,7 +22,11 @@ class ImageViewController: UIViewController {
         theImage.image = theSourceImage
     }
     @IBAction func back(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+//        self.dismiss(animated: true, completion: nil)
+        self.dismiss(animated: true) {
+            self.callBack?()
+        }
+        
     }
     
 }
